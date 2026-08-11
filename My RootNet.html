@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>My RootNet - নীতিমালা এবং শর্তাবলী</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --primary-dark: #3730a3;
+            --accent-color: #0ea5e9;
+            --bg-color: #f8fafc;
+            --text-color: #0f172a;
+            --light-text: #64748b;
+            --border-color: #e2e8f0;
+            --white: #ffffff;
+            --danger: #dc2626;
+            --hero-bg: linear-gradient(135deg, #f0f9ff 0%, #eef2ff 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Hind Siliguri', sans-serif;
+            line-height: 1.8;
+            scroll-behavior: smooth;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        body.lang-en { font-family: 'Poppins', sans-serif; }
+        body.lang-hi { font-family: 'Noto Sans Devanagari', sans-serif; }
+
+        /* Header Section */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 38px;
+            width: 38px;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .logo-text span {
+            color: var(--text-color);
+        }
+
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .lang-select {
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background: var(--white);
+            font-family: inherit;
+            font-size: 14px;
+            cursor: pointer;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        /* Hamburger Menu Button */
+        .menu-btn {
+            display: none;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+            flex-direction: column;
+            gap: 5px;
+            z-index: 1100;
+        }
+
+        .menu-btn span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: var(--text-color);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .menu-btn.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+        .menu-btn.active span:nth-child(2) { opacity: 0; }
+        .menu-btn.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+        /* Hero Section */
+        .hero {
+            background: var(--hero-bg);
+            color: var(--text-color);
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero-logo {
+            height: 90px;
+            width: 90px;
+            border-radius: 18px;
+            margin-bottom: 20px;
+            box-shadow: 0 15px 30px rgba(79, 70, 229, 0.2);
+            border: 3px solid white;
+        }
+
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 36px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .hero p {
+            font-size: 17px;
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--light-text);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Main Navigation Menu */
+        .main-nav {
+            background: var(--white);
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            border: 1px solid var(--border-color);
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .main-nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 14px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.2s ease;
+            font-weight: 500;
+            background: #f1f5f9;
+        }
+
+        .main-nav a:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Content Area */
+        .content {
+            background: var(--white);
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            border: 1px solid var(--border-color);
+        }
+
+        .content section {
+            margin-bottom: 50px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .content section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .content h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 26px;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .content h3 {
+            font-size: 19px;
+            margin-top: 30px;
+            margin-bottom: 12px;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        .content p, .content li {
+            font-size: 16px;
+            color: #334155;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        .content ul, .content ol {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .content li::marker {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Custom Boxes */
+        .highlight-box {
+            background-color: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-left: 4px solid var(--accent-color);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+            font-size: 15px;
+            color: #1e3a8a;
+        }
+
+        .warning-box {
+            background-color: #fef2f2;
+            border: 1px solid #fee2e2;
+            border-left: 4px solid var(--danger);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+            font-size: 15px;
+            color: #991b1b;
+        }
+
+        .coming-soon-badge {
+            display: inline-block;
+            background: #f1f5f9;
+            color: var(--primary-dark);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            border: 1px solid var(--border-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Complaint Form Section */
+        .complaint-section {
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin-top: 40px;
+        }
+
+        .complaint-section h3 {
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 22px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 15px;
+            background: white;
+            transition: border-color 0.3s;
+            user-select: text;
+            -webkit-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .form-btn:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-color);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        footer p {
+            font-size: 14px;
+            opacity: 0.7;
+            margin-bottom: 5px;
+        }
+
+        /* Overlay for Drawer */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 998;
+        }
+        .overlay.active { display: block; }
+
+        /* Responsive Design - Mobile Full Screen Fit */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 10px 15px; /* Edge to edge padding */
+            }
+            
+            .menu-btn {
+                display: flex; /* Show Hamburger */
+            }
+
+            .main-nav {
+                display: none;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 75%;
+                max-width: 300px;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                align-items: stretch;
+                padding: 80px 20px 20px;
+                box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+                z-index: 999;
+                margin: 0;
+                border-radius: 0;
+                overflow-y: auto;
+                transition: transform 0.3s ease;
+                transform: translateX(100%);
+            }
+            
+            .main-nav.active {
+                display: flex;
+                transform: translateX(0);
+            }
+
+            .main-nav a {
+                text-align: left;
+                margin: 2px 0;
+                padding: 12px 15px;
+                font-size: 16px;
+            }
+
+            .container {
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .content {
+                border-radius: 0;
+                border: none;
+                padding: 25px 20px; /* Edge to edge content */
+                box-shadow: none;
+            }
+
+            /* Making Complaint Box Edge-to-Edge on Mobile */
+            .complaint-section {
+                margin: 30px -20px 0 -20px; /* Negative margin to break out of parent padding */
+                padding: 30px 20px;
+                border-radius: 0;
+                border-left: none;
+                border-right: none;
+            }
+
+            .hero {
+                padding: 40px 15px;
+            }
+
+            .hero h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body class="lang-bn">
+
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo-area">
+                <img src="https://z-cdn-media.chatglm.cn/files/e3807204-ce63-46ef-b21a-7716fafce576.jpg?auth_key=1886466736-ad0e417fdc2b46638eabb8e43369a663-0-77127836c0a6a81576853d605c8c9889" alt="My RootNet Logo" class="logo-img">
+                <div class="logo-text">My<span>RootNet</span></div>
+            </a>
+            <div class="header-controls">
+                <select class="lang-select" id="langSwitch">
+                    <option value="bn">বাংলা</option>
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                </select>
+                <button class="menu-btn" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="https://z-cdn-media.chatglm.cn/files/e3807204-ce63-46ef-b21a-7716fafce576.jpg?auth_key=1886466736-ad0e417fdc2b46638eabb8e43369a663-0-77127836c0a6a81576853d605c8c9889" alt="My RootNet Logo" class="hero-logo">
+        <h1 id="hero_title">নীতিমালা ও শর্তাবলী</h1>
+        <p id="hero_desc">My RootNet প্ল্যাটফর্মে স্বাগতম। একটি নিরাপদ ও সুস্থ সোশ্যাল মিডিয়া পরিবেশ নিশ্চিত করতে আমাদের নীতিমালাগুলো মেনে চলা সকলের জন্য বাধ্যতামূলক।</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        
+        <!-- Main Navigation (Drawer on Mobile) -->
+        <nav class="main-nav" id="mainNav">
+            <a href="#about" id="nav_about">কোম্পানির সম্পর্কে</a>
+            <a href="#app-policy" id="nav_app">অ্যাপ নীতিমালা</a>
+            <a href="#content-policy" id="nav_content">কনটেন্ট নীতিমালা</a>
+            <a href="#creator-policy" id="nav_creator">ক্রিয়েটর গাইডলাইন</a>
+            <a href="#community" id="nav_community">কমিউনিটি গাইডলাইন</a>
+            <a href="#monetize" id="nav_monetize">মনিটাইজ</a>
+            <a href="#privacy" id="nav_privacy">প্রাইভেসি পলিসি</a>
+            <a href="#terms" id="nav_terms">ব্যবহারের শর্তাবলী</a>
+            <a href="#complaint-section" id="nav_complaint" style="margin-top: 10px; background: var(--primary-color); color: white;">অভিযোগ অথবা বিস্তারিত জানতে</a>
+        </nav>
+
+        <!-- Content Area -->
+        <main class="content" id="contentArea">
+            <!-- Content injected by JS -->
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div style="display: flex; justify-content: center; align-items: center; gap: 10px; margin-bottom: 15px;">
+            <img src="https://z-cdn-media.chatglm.cn/files/e3807204-ce63-46ef-b21a-7716fafce576.jpg?auth_key=1886466736-ad0e417fdc2b46638eabb8e43369a663-0-77127836c0a6a81576853d605c8c9889" alt="Logo" style="height: 30px; width: 30px; border-radius: 6px;">
+            <span style="font-weight: bold; font-size: 16px; font-family: 'Poppins', sans-serif;">My RootNet</span>
+        </div>
+        <p id="footer_copy">&copy; ২০২৬ My RootNet. সর্বস্বত্ব সংরক্ষিত।</p>
+        <p id="footer_update">এই নীতিমালা সময়ে সময়ে আপডেট করা হয়। নিয়মিত যাচাই করুন।</p>
+    </footer>
+
+    <script>
+        // --- Translations Data ---
+        const translations = {
+            bn: {
+                nav: { about: "কোম্পানির সম্পর্কে", app: "অ্যাপ নীতিমালা", content: "কনটেন্ট নীতিমালা", creator: "ক্রিয়েটর গাইডলাইন", community: "কমিউনিটি গাইডলাইন", monetize: "মনিটাইজ", privacy: "প্রাইভেসি পলিসি", terms: "ব্যবহারের শর্তাবলী", complaint: "অভিযোগ অথবা বিস্তারিত জানতে" },
+                hero_title: "নীতিমালা ও শর্তাবলী",
+                hero_desc: "My RootNet প্ল্যাটফর্মে স্বাগতম। একটি নিরাপদ ও সুস্থ সোশ্যাল মিডিয়া পরিবেশ নিশ্চিত করতে আমাদের নীতিমালাগুলো মেনে চলা সকলের জন্য বাধ্যতামূলক।",
+                footer_copy: "&copy; ২০২৬ My RootNet. সর্বস্বত্ব সংরক্ষিত।",
+                footer_update: "এই নীতিমালা সময়ে সময়ে আপডেট করা হয়। নিয়মিত যাচাই করুন।",
+                form_title: "অভিযোগ অথবা বিস্তারিত জানতে",
+                form_link_placeholder: "আপনার প্রোফাইল লিংক এখানে দিন",
+                form_desc_placeholder: "আপনার অভিযোগ বা সমস্যার বিস্তারিত এখানে লিখুন...",
+                form_btn: "সাবমিট করুন",
+                content: `
+                    <section id="about">
+                        <h2>কোম্পানির সম্পর্কে</h2>
+                        <p>My RootNet একটি আধুনিক এবং প্রগতিশীল সোশ্যাল মিডিয়া প্ল্যাটফর্ম, যা মানুষকে নতুন করে সংযুক্ত করার লক্ষ্যে তৈরি করা হয়েছে। আমাদের মূল উদ্দেশ্য হলো এমন একটি ডিজিটাল স্পেস তৈরি করা, যেখানে ব্যবহারকারীরা তাদের চিন্তা, সৃষ্টিশীলতা এবং জীবনের বিভিন্ন মুহূর্ত নিরাপদে শেয়ার করতে পারেন। আমরা বিশ্বাস করি প্রযুক্তির সঠিক ব্যবহারের মাধ্যমে মানুষের মধ্যে দূরত্ব কমানো সম্ভব, আর সেই লক্ষ্যেই আমরা এই প্ল্যাটফর্মটি তৈরি করেছি।</p>
+                        <p>তবে স্বাধীনতার সাথে আসে দায়িত্ব। আমরা বিশ্বাস করি, সোশ্যাল মিডিয়া শুধু মানুষের সাথে মানুষের সংযোগ নয়, বরং এটি একটি শক্তিশালী মাধ্যম যা সমাজকে এগিয়ে নিতে সাহায্য করে। My RootNet এমন একটি পরিবেশ নিশ্চিত করে, যেখানে প্রতিটি ব্যবহারকারীর মতপ্রকাশের স্বাধীনতা থাকবে, কিন্তু তা অন্যের অধিকার বা আবেগ ক্ষুণ্ন করবে না। আমরা সর্বদা সততা, স্বচ্ছতা এবং ব্যবহারকারীর গোপনীয়তাকে সর্বোচ্চ অগ্রাধিকার দিয়ে থাকি। আমাদের কারিগরি দল ক্রমাগত কাজ করে যাচ্ছে প্ল্যাটফর্মটিকে আরও উন্নত, নিরাপদ এবং ব্যবহারকারী-বান্ধব করে তোলার জন্য, যেন আপনার ডিজিটাল জীবন আরও সুন্দর ও নিরাপদ হয়।</p>
+                    </section>
+
+                    <section id="app-policy">
+                        <h2>অ্যাপ নীতিমালা</h2>
+                        <p>My RootNet অ্যাপ ব্যবহার করার আগে নিচের নীতিমালাগুলো মেনে চলা সকল ব্যবহারকারীর জন্য বাধ্যতামূলক। এই নীতিমালাগুলো আমাদের প্ল্যাটফর্মকে সুরক্ষিত রাখতে সাহায্য করে।</p>
+                        <h3>অ্যাকাউন্ট তৈরি ও নিরাপত্তা</h3>
+                        <ul>
+                            <li><strong>বয়সের সীমা:</strong> অ্যাপ ব্যবহার করতে হলে ব্যবহারকারীর বয়স কমপক্ষে ১৩ বছর হতে হবে। অপ্রাপ্ত বয়স্কদের অভিভাবকের অনুমতি প্রয়োজন।</li>
+                            <li><strong>সঠিক তথ্য:</strong> অ্যাকাউন্ট খোলার সময় সঠিক নাম, জন্ম তারিখ, ইমেইল এবং ফোন নম্বর ব্যবহার করতে হবে। ভুয়া তথ্য দিয়ে অ্যাকাউন্ট খোলা নিষিদ্ধ।</li>
+                            <li><strong>একাধিক অ্যাকাউন্ট:</strong> একজন ব্যবহারকারী শুধুমাত্র একটি প্রধান অ্যাকাউন্ট রাখতে পারবেন। স্প্যাম বা প্রতারণার উদ্দেশ্যে একাধিক অ্যাকাউন্ট তৈরি করা সম্পূর্ণ নিষিদ্ধ।</li>
+                            <li><strong>লগইন নিরাপত্তা:</strong> আপনার পাসওয়ার্ড অন্য কারও সাথে শেয়ার করবেন না। আপনার অ্যাকাউন্টের সকল কার্যকলাপের দায়ভার আপনার নিজের থাকবে।</li>
+                        </ul>
+                        <div class="warning-box">
+                            <strong>বট ও ফেক এনগেজমেন্ট নিষিদ্ধ:</strong> কোনো বট (Bot), থার্ড-পার্টি অ্যাপ বা অটোমেটেড সিস্টেম ব্যবহার করে ভিউ (View) বা সাবস্ক্রাইবার (Subscriber) বৃদ্ধির চেষ্টা করা সম্পূর্ণ নিষিদ্ধ। ফেক সার্চ বা কৃত্রিম উপায়ে এনগেজমেন্ট বাড়ানোর চেষ্টা করলে অ্যাকাউন্ট সাথে সাথে চিরস্থায়ীভাবে মুছে ফেলা হবে এবং কোনো পূর্ব সতর্কবার্তা দেওয়া হবে না।
+                        </div>
+                    </section>
+
+                    <section id="content-policy">
+                        <h2>কনটেন্ট নীতিমালা</h2>
+                        <p>My RootNet একটি উন্মুক্ত প্ল্যাটফর্ম হলেও, আমরা কিছু নির্দিষ্ট ধরনের কনটেন্ট কঠোরভাবে নিষিদ্ধ করি। নিচের নিয়মগুলো ভঙ্গ করলে কনটেন্ট মুছে ফেলা হবে এবং অ্যাকাউন্ট সাসপেন্ড করা হবে।</p>
+                        <h3>নিষিদ্ধ কনটেন্টের তালিকা:</h3>
+                        <ol>
+                            <li><strong>ঘৃণামূলক বক্তব্য:</strong> ধর্ম, জাতি, লিঙ্গ, বর্ণ বা নৃতাত্ত্বিক ভিত্তিতে কাউকে অবমাননা করা বা আক্রমণ করা যাবে না।</li>
+                            <li><strong>প্রাপ্তবয়স্ক কনটেন্ট:</strong> অশ্লীল ছবি, ভিডিও, অডিও বা টেক্সট পোস্ট করা সম্পূর্ণ নিষিদ্ধ।</li>
+                            <li><strong>সহিংসতা ও ক্ষতি:</strong> মানুষ বা প্রাণীর প্রতি সহিংসতামূলক কনটেন্ট, নির্যাতনের ভিডিও, বা সন্ত্রাসবাদের প্রশংসা করা যাবে না।</li>
+                            <li><strong>হ্যারাসমেন্ট ও বুলিং:</strong> কাউকে সাইবার বুলিং করা, ব্যক্তিগত আক্রমণ করা বা প্রাইভেট তথ্য অনুমতি ছাড়া পোস্ট করা দণ্ডনীয় অপরাধ।</li>
+                            <li><strong>ভুয়া খবর:</strong> সমাজে দাঙ্গা বা ভীতি ছড়াতে পারে এমন কোনো মিথ্যা তথ্য প্রকাশ করা যাবে না।</li>
+                            <li><strong>কপিরাইট লঙ্ঘন:</strong> অন্যের ভিডিও, ছবি, মিউজিক বা লেখা মালিকের অনুমতি ছাড়া নিজের নামে পোস্ট করা যাবে না।</li>
+                        </ol>
+                        <div class="highlight-box">
+                            <strong>রিপোর্টিং:</strong> আপনি যদি মনে করেন কোনো কনটেন্ট আমাদের নীতিমালা ভঙ্গ করছে, তবে সেটি রিপোর্ট করুন। আমাদের টিম ২৪ ঘণ্টার মধ্যে প্রতিটি রিপোর্ট রিভিউ করে প্রয়োজনীয় ব্যবস্থা গ্রহণ করে।
+                        </div>
+                    </section>
+
+                    <section id="creator-policy">
+                        <h2>ক্রিয়েটর গাইডলাইন</h2>
+                        <p>কনটেন্ট ক্রিয়েটররা হলেন My RootNet-এর প্রাণ। ক্রিয়েটরদের জন্য কিছু বিশেষ নিয়মাবলী রয়েছে, যা মেনে চললে তাদের অ্যাকাউন্ট দ্রুত গ্রো করবে এবং প্ল্যাটফর্মে ভালো একটি কমিউনিটি তৈরি হবে।</p>
+                        <h3>নিয়মাবলী:</h3>
+                        <ul>
+                            <li><strong>মৌলিক কনটেন্ট:</strong> নিজের তৈরি কনটেন্ট আপলোড করুন। অন্যের কনটেন্ট ব্যবহার করলে অবশ্যই যথাযথ ক্রেডিট দিতে হবে।</li>
+                            <li><strong>ক্লিকবেইট নিষিদ্ধ:</strong> থাম্বনেইল বা টাইটেলে ভুয়া তথ্য দিয়ে ভিউ আদায়ের চেষ্টা করা যাবে না। টাইটেল এবং থাম্বনেইল মূল কনটেন্টের সাথে মিল রেখে তৈরি করতে হবে।</li>
+                            <li><strong>ইন্টারঅ্যাকশন:</strong> ফলোয়ারদের কমেন্টের রিপ্লাই দিন। সবসময় ভদ্র ভাষায় কথা বলুন এবং সুসম্পর্ক বজায় রাখুন।</li>
+                            <li><strong>স্প্যামিং নয়:</strong> একই কনটেন্ট বারবার পোস্ট করবেন না বা অন্যের পোস্টে অপ্রাসঙ্গিক লিংক শেয়ার করবেন না।</li>
+                        </ul>
+                    </section>
+
+                    <section id="community">
+                        <h2>কমিউনিটি গাইডলাইন</h2>
+                        <p>আমাদের কমিউনিটি সবার জন্য উন্মুক্ত এবং নিরাপদ। এখানে প্রত্যেকেরই নিজের মতামত প্রকাশের অধিকার রয়েছে। তবে কমিউনিটি ভাঙন বা অশান্তি সৃষ্টি করে এমন কাজ করা নিষিদ্ধ। ধর্মীয় বা রাজনৈতিক বিষয়ে গালাগালি বা উসকানিমূলক পোস্ট করা যাবে না। কারও সাথে মতপ্রকাশের অমিল হলে তা বিনয়ের সাথে আলোচনা করুন, কাউকে অপমান করবেন না।</p>
+                        <p>আমরা চাই আমাদের প্ল্যাটফর্মে এমন একটি পরিবেশ তৈরি হোক, যেখানে নতুন ক্রিয়েটররা নিজেদের সৃষ্টিশীলতা নির্ভয়ে প্রকাশ করতে পারেন। কারও মতামত যদি আপনার সাথে না মেলে, তবে তাকে নীরব করার চেষ্টা না করে যুক্তি দিয়ে নিজের কথা উপস্থাপন করুন। মনে রাখবেন, সম্মান বজায় রাখার মাধ্যমেই একটি সুস্থ সমাজ গঠিত হয়। কাউকে তার পোশাক, চেহারা বা জীবনযাপনের জন্য নিয়ে মজা করা বা ট্রল করা আমাদের কমিউনিটিতে কঠোরভাবে নিষিদ্ধ। একে অপরের প্রতি সহানুভূতিশীল হলে একটি সুন্দর এবং আনন্দময় ডিজিটাল পরিবেশ তৈরি করা সম্ভব।</p>
+                    </section>
+
+                    <section id="monetize">
+                        <span class="coming-soon-badge">Coming Soon</span>
+                        <h2>মনিটাইজ</h2>
+                        <p>My RootNet-এ ক্রিয়েটররা তাদের কনটেন্ট থেকে আয় করতে পারবেন। তবে আপাতত এই ফিচারটি আমাদের প্ল্যাটফর্মে চালু নেই।</p>
+                        <div class="highlight-box">
+                            <strong>শীঘ্রই চালু হচ্ছে:</strong> মনিটাইজেশন পলিসি এবং আয়ের সুবিধা শীঘ্রই সকল ক্রিয়েটরদের জন্য উন্মুক্ত করা হবে। আমাদের অ্যাপে যখন ১০,০০০ (দশ হাজার) সক্রিয় ব্যবহারকারী পৌঁছে যাবে, তখন আমরা আনুষ্ঠানিকভাবে মনিটাইজেশন চালু করব। এখন পর্যন্ত আপনার সহযোগিতা এবং ধৈর্য আমাদের কাম্য। আমরা শীঘ্রই বিস্তারিত নিয়মাবলী প্রকাশ করব।
+                        </div>
+                    </section>
+
+                    <section id="privacy">
+                        <h2>প্রাইভেসি পলিসি</h2>
+                        <p>এই প্রাইভেসি পলিসিটি ব্যাখ্যা করে যে My RootNet কীভাবে আপনার ব্যক্তিগত তথ্য সংগ্রহ, ব্যবহার এবং সুরক্ষিত করে। আপনি আমাদের সেবা ব্যবহার করার মাধ্যমে এই পলিসির শর্তাবলীতে সম্মত হচ্ছেন।</p>
+                        <h3>১. আমরা কী তথ্য সংগ্রহ করি</h3>
+                        <p>আমাদের সেবা প্রদানের জন্য আমরা নিম্নলিখিত তথ্যগুলো সংগ্রহ করি:</p>
+                        <ul>
+                            <li><strong>অ্যাকাউন্ট তথ্য:</strong> নাম, ইমেইল ঠিকানা, ফোন নম্বর, জন্ম তারিখ এবং পাসওয়ার্ড (এনক্রিপ্টেড আকারে)।</li>
+                            <li><strong>প্রোফাইল তথ্য:</strong> আপনার প্রোফাইল ছবি, জীবনবৃত্তান্ত এবং আপনার দেওয়া অন্যান্য তথ্য।</li>
+                            <li><strong>ব্যবহারের তথ্য:</strong> আইপি অ্যাড্রেস, ব্রাউজারের ধরন, ব্যবহারের সময় এবং অ্যাপের ভেতরে আপনার কার্যকলাপ।</li>
+                        </ul>
+                        <h3>২. তথ্য কীভাবে ব্যবহার করি</h3>
+                        <p>আমরা আপনার তথ্য অ্যাকাউন্ট তৈরি, নিরাপত্তা নিশ্চিতকরণ, জালিয়াতি প্রতিরোধ এবং গ্রাহক সেবা প্রদানের কাজে ব্যবহার করে থাকি।</p>
+                        <h3>৩. তৃতীয় পক্ষের সাথে শেয়ারিং</h3>
+                        <p>আমরা আপনার ব্যক্তিগত তথ্য কোনো তৃতীয় পক্ষের কাছে বিক্রি করি না। তবে আইনি প্রয়োজনে বা সরকারি সংস্থার অনুরোধ থাকলে তথ্য শেয়ার করা হতে পারে।</p>
+                        <h3>৪. ডেটা নিরাপত্তা</h3>
+                        <p>আপনার তথ্যের নিরাপত্তা আমাদের কাছে অত্যন্ত গুরুত্বপূর্ণ। আমরা SSL এনক্রিপশন এবং আধুনিক নিরাপত্তা প্রযুক্তি ব্যবহার করি যাতে আপনার তথ্য সুরক্ষিত থাকে।</p>
+                        <h3>৫. ব্যবহারকারীর অধিকার</h3>
+                        <p>আপনার নিজের তথ্যের উপর সম্পূর্ণ নিয়ন্ত্রণ রয়েছে। অ্যাকাউন্ট ডিলিট করলে আমাদের সার্ভার থেকে আপনার সমস্ত ডেটা স্থায়ীভাবে মুছে ফেলা হবে।</p>
+                    </section>
+
+                    <section id="terms">
+                        <h2>ব্যবহারের শর্তাবলী</h2>
+                        <p>এই শর্তাবলী হলো আপনার এবং My RootNet-এর মধ্যে একটি আইনি চুক্তি। অ্যাপ ব্যবহার করার মাধ্যমে আপনি নিচের শর্তাবলী মেনে নিচ্ছেন:</p>
+                        <h3>১. গ্রহণযোগ্যতা</h3>
+                        <p>My RootNet ব্যবহার করার জন্য আপনাকে অবশ্যই ১৩ বছর বয়স্ক হতে হবে এবং আপনার বাসস্থানের আইন অনুযায়ী চুক্তিতে আবদ্ধ হওয়ার ক্ষমতা থাকতে হবে।</p>
+                        <h3>২. ব্যবহারকারীর দায়িত্ব</h3>
+                        <p>আপনি আপনার অ্যাকাউন্টের সকল কার্যকলাপের জন্য সম্পূর্ণ দায়ী। আপনার পাসওয়ার্ড নিরাপদে রাখা আপনার দায়িত্ব। অন্য কারও অ্যাকাউন্ট ব্যবহার করা বা অন্যকে আপনার অ্যাকাউন্ট ব্যবহার করতে দেওয়া নিষিদ্ধ।</p>
+                        <h3>৩. নিষিদ্ধ কার্যকলাপ</h3>
+                        <p>অ্যাপের সার্ভার হ্যাক করা, ভাইরাস ছড়ানো, বট ব্যবহার করে ডেটা স্ক্র্যাপ করা এবং অন্য ব্যবহারকারীদের হ্যারাস করা সম্পূর্ণ নিষিদ্ধ।</p>
+                        <h3>৪. মেধাসম্পদ</h3>
+                        <p>প্ল্যাটফর্মে আপনি যা পোস্ট করেন, তার স্বত্বাধিকার আপনার নিজের থাকবে। তবে, আপনি পোস্ট করার মাধ্যমে My RootNet-কে সেই কনটেন্ট প্রদর্শনের একটি সীমিত লাইসেন্স প্রদান করছেন।</p>
+                        <h3>৫. অ্যাকাউন্ট টার্মিনেশন</h3>
+                        <p>আমাদের নীতিমালা লঙ্ঘন করলে আমরা কোনো পূর্ব নোটিশ ছাড়াই আপনার অ্যাকাউন্ট বন্ধ করে দিতে পারি। গুরুতর অপরাধের ক্ষেত্রে আইনি ব্যবস্থা নেওয়া হতে পারে।</p>
+                        <h3>৬. পরিবর্তনের অধিকার</h3>
+                        <p>আমরা যেকোনো সময় এই শর্তাবলী বা নীতিমালা পরিবর্তন বা আপডেট করার অধিকার রাখি।</p>
+                    </section>
+                    
+                    <!-- Complaint Form -->
+                    <div class="complaint-section" id="complaint-section">
+                        <h3 id="form_title">অভিযোগ অথবা বিস্তারিত জানতে</h3>
+                        <form id="complaintForm">
+                            <div class="form-group">
+                                <input type="text" id="form_link" class="form-input" placeholder="আপনার প্রোফাইল লিংক এখানে দিন" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="form_desc" class="form-textarea" placeholder="আপনার অভিযোগ বা সমস্যার বিস্তারিত এখানে লিখুন..." required></textarea>
+                            </div>
+                            <button type="submit" class="form-btn" id="form_btn">সাবমিট করুন</button>
+                        </form>
+                    </div>
+                `
+            },
+            en: {
+                nav: { about: "About Company", app: "App Policies", content: "Content Policies", creator: "Creator Guidelines", community: "Community Guidelines", monetize: "Monetize", privacy: "Privacy Policy", terms: "Terms of Service", complaint: "Complaint or More Details" },
+                hero_title: "Policies and Terms of Service",
+                hero_desc: "Welcome to the My RootNet platform. To ensure a safe and healthy social media environment, it is mandatory for everyone to follow our policies.",
+                footer_copy: "&copy; 2026 My RootNet. All Rights Reserved.",
+                footer_update: "These policies are updated periodically. Please check regularly.",
+                form_title: "For Complaints or More Details",
+                form_link_placeholder: "Enter your profile link here",
+                form_desc_placeholder: "Write the details of your complaint or issue here...",
+                form_btn: "Submit",
+                content: `
+                    <section id="about">
+                        <h2>About Company</h2>
+                        <p>My RootNet is a modern and progressive social media platform created to reconnect people. Our main objective is to create a digital space where users can safely share their thoughts, creativity, and various moments of life. We believe that through the proper use of technology, it is possible to reduce distances between people, and with that goal in mind, we have created this platform.</p>
+                        <p>However, freedom comes with responsibility. We believe that social media is not just about connecting people, but it is a powerful medium that helps society move forward. My RootNet ensures an environment where every user has the freedom of expression, but it does not infringe on the rights or emotions of others. We always prioritize honesty, transparency, and user privacy. Our technical team is continuously working to make the platform more advanced, secure, and user-friendly, so that your digital life becomes more beautiful and secure.</p>
+                    </section>
+
+                    <section id="app-policy">
+                        <h2>App Policies</h2>
+                        <p>Before using the My RootNet app, it is mandatory for all users to follow the policies below. These policies help keep our platform secure.</p>
+                        <h3>Account Creation & Security</h3>
+                        <ul>
+                            <li><strong>Age Limit:</strong> To use the app, the user must be at least 13 years old. Minors need parental permission.</li>
+                            <li><strong>Accurate Information:</strong> Correct name, date of birth, email, and phone number must be used when opening an account. Opening an account with fake information is prohibited.</li>
+                            <li><strong>Multiple Accounts:</strong> A user can only have one main account. Creating multiple accounts for spam or fraud is strictly prohibited.</li>
+                            <li><strong>Login Security:</strong> Do not share your password with anyone. You will be solely responsible for all activities in your account.</li>
+                        </ul>
+                        <div class="warning-box">
+                            <strong>Bots & Fake Engagement Prohibited:</strong> Using any bot, third-party app, or automated system to increase views or subscribers is strictly prohibited. Any attempt to artificially increase engagement or fake searches will result in immediate and permanent deletion of the account without any prior warning.
+                        </div>
+                    </section>
+
+                    <section id="content-policy">
+                        <h2>Content Policies</h2>
+                        <p>Although My RootNet is an open platform, we strictly prohibit certain types of content. If the following rules are broken, the content will be deleted and the account suspended.</p>
+                        <h3>List of Prohibited Content:</h3>
+                        <ol>
+                            <li><strong>Hate Speech:</strong> Disparaging or attacking anyone based on religion, race, gender, color, or ethnicity is not allowed.</li>
+                            <li><strong>Adult Content:</strong> Posting obscene photos, videos, audio, or text is strictly prohibited.</li>
+                            <li><strong>Violence & Harm:</strong> Violent content against people or animals, torture videos, or praising terrorism is not allowed.</li>
+                            <li><strong>Harassment & Bullying:</strong> Cyberbullying, personal attacks, or posting private information without permission is a punishable offense.</li>
+                            <li><strong>Misinformation:</strong> Publishing any false information that could cause riots or fear in society is not allowed.</li>
+                            <li><strong>Copyright Infringement:</strong> Posting someone else's video, photo, music, or writing under your own name without the owner's permission is prohibited.</li>
+                        </ol>
+                        <div class="highlight-box">
+                            <strong>Reporting:</strong> If you believe any content violates our policies, please report it. Our team reviews every report within 24 hours and takes necessary action.
+                        </div>
+                    </section>
+
+                    <section id="creator-policy">
+                        <h2>Creator Guidelines</h2>
+                        <p>Content creators are the soul of My RootNet. There are some special rules for creators, which, if followed, will help their accounts grow quickly and build a good community on the platform.</p>
+                        <h3>Guidelines:</h3>
+                        <ul>
+                            <li><strong>Original Content:</strong> Upload content you have created yourself. If using someone else's content, proper credit must be given.</li>
+                            <li><strong>No Clickbait:</strong> Do not attempt to gain views by providing false information in thumbnails or titles. Titles and thumbnails must match the main content.</li>
+                            <li><strong>Interaction:</strong> Reply to followers' comments. Always speak politely and maintain good relationships.</li>
+                            <li><strong>No Spamming:</strong> Do not post the same content repeatedly or share irrelevant links on others' posts.</li>
+                        </ul>
+                    </section>
+
+                    <section id="community">
+                        <h2>Community Guidelines</h2>
+                        <p>Our community is open and safe for everyone. Everyone has the right to express their opinion here. However, activities that cause community division or unrest are prohibited. Abusive or provocative posts on religious or political matters are not allowed. If you disagree with someone's expression, discuss it politely, do not insult anyone.</p>
+                        <p>We want to create an environment on our platform where new creators can express their creativity fearlessly. If someone's opinion does not match yours, present your point with logic instead of trying to silence them. Remember, a healthy society is formed by maintaining respect. Making fun of or trolling someone for their clothes, appearance, or lifestyle is strictly prohibited in our community. Being empathetic towards each other makes it possible to create a beautiful and joyful digital environment.</p>
+                    </section>
+
+                    <section id="monetize">
+                        <span class="coming-soon-badge">Coming Soon</span>
+                        <h2>Monetize</h2>
+                        <p>Creators on My RootNet will be able to earn from their content. However, this feature is not currently active on our platform.</p>
+                        <div class="highlight-box">
+                            <strong>Launching Soon:</strong> Monetization policies and earning benefits will be opened for all creators soon. We will officially launch monetization when our app reaches 10,000 (ten thousand) active users. Your cooperation and patience are appreciated until then. We will publish detailed rules soon.
+                        </div>
+                    </section>
+
+                    <section id="privacy">
+                        <h2>Privacy Policy</h2>
+                        <p>This Privacy Policy explains how My RootNet collects, uses, and protects your personal information. By using our services, you agree to the terms of this policy.</p>
+                        <h3>1. What Information We Collect</h3>
+                        <p>To provide our services, we collect the following information:</p>
+                        <ul>
+                            <li><strong>Account Information:</strong> Name, email address, phone number, date of birth, and password (in encrypted form).</li>
+                            <li><strong>Profile Information:</strong> Your profile picture, bio, and other information you provide.</li>
+                            <li><strong>Usage Data:</strong> IP address, browser type, usage time, and your activities within the app.</li>
+                        </ul>
+                        <h3>2. How We Use Information</h3>
+                        <p>We use your information for account creation, ensuring security, preventing fraud, and providing customer service.</p>
+                        <h3>3. Sharing with Third Parties</h3>
+                        <p>We do not sell your personal information to any third party. However, information may be shared if legally required or requested by government agencies.</p>
+                        <h3>4. Data Security</h3>
+                        <p>The security of your information is extremely important to us. We use SSL encryption and modern security technologies to keep your data secure.</p>
+                        <h3>5. User Rights</h3>
+                        <p>You have full control over your own information. If you delete your account, all your data will be permanently deleted from our servers.</p>
+                    </section>
+
+                    <section id="terms">
+                        <h2>Terms of Service</h2>
+                        <p>These terms are a legal agreement between you and My RootNet. By using the app, you agree to the following terms:</p>
+                        <h3>1. Acceptability</h3>
+                        <p>To use My RootNet, you must be at least 13 years old and have the legal capacity to enter into a contract in your jurisdiction.</p>
+                        <h3>2. User Responsibilities</h3>
+                        <p>You are entirely responsible for all activities in your account. Keeping your password safe is your responsibility. Using someone else's account or letting others use yours is prohibited.</p>
+                        <h3>3. Prohibited Activities</h3>
+                        <p>Hacking app servers, spreading viruses, scraping data using bots, and harassing other users are strictly prohibited.</p>
+                        <h3>4. Intellectual Property</h3>
+                        <p>You retain ownership of what you post on the platform. However, by posting, you grant My RootNet a limited license to display that content.</p>
+                        <h3>5. Account Termination</h3>
+                        <p>We may close your account without prior notice if our policies are violated. Legal action may be taken for serious offenses.</p>
+                        <h3>6. Right to Change</h3>
+                        <p>We reserve the right to change or update these terms or policies at any time.</p>
+                    </section>
+                    
+                    <!-- Complaint Form -->
+                    <div class="complaint-section" id="complaint-section">
+                        <h3 id="form_title">For Complaints or More Details</h3>
+                        <form id="complaintForm">
+                            <div class="form-group">
+                                <input type="text" id="form_link" class="form-input" placeholder="Enter your profile link here" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="form_desc" class="form-textarea" placeholder="Write the details of your complaint or issue here..." required></textarea>
+                            </div>
+                            <button type="submit" class="form-btn" id="form_btn">Submit</button>
+                        </form>
+                    </div>
+                `
+            },
+            hi: {
+                nav: { about: "कंपनी के बारे में", app: "ऐप नीतियां", content: "सामग्री नीतियां", creator: "क्रिएटर दिशानिर्देश", community: "समुदाय दिशानिर्देश", monetize: "मुद्रीकरण", privacy: "गोपनीयता नीति", terms: "सेवा की शर्तें", complaint: "शिकायत या अधिक जानकारी" },
+                hero_title: "नीतियां और सेवा की शर्तें",
+                hero_desc: "My RootNet प्लेटफॉर्म पर आपका स्वागत है। एक सुरक्षित और स्वस्थ सोशल मीडिया वातावरण सुनिश्चित करने के लिए हमारी नीतियों का पालन करना सभी के लिए अनिवार्य है।",
+                footer_copy: "&copy; 2026 My RootNet. सर्वाधिकार सुरक्षित।",
+                footer_update: "इन नीतियों को समय-समय पर अपडेट किया जाता है। नियमित रूप से जांचें।",
+                form_title: "शिकायत या अधिक जानकारी के लिए",
+                form_link_placeholder: "अपनी प्रोफ़ाइल लिंक यहां दर्ज करें",
+                form_desc_placeholder: "अपनी शिकायत या समस्या का विवरण यहां लिखें...",
+                form_btn: "जमा करें",
+                content: `
+                    <section id="about">
+                        <h2>कंपनी के बारे में</h2>
+                        <p>My RootNet एक आधुनिक और प्रगतिशील सोशल मीडिया प्लेटफॉर्म है, जिसे लोगों को नए सिरे से जोड़ने के उद्देश्य से बनाया गया है। हमारा मुख्य उद्देश्य एक ऐसे डिजिटल स्पेस का निर्माण करना है, जहाँ उपयोगकर्ता अपने विचारों, रचनात्मकता और जीवन के विभिन्न पलों को सुरक्षित रूप से साझा कर सकें। हम मानते हैं कि प्रौद्योगिकी के सही उपयोग से लोगों के बीच की दूरी को कम किया जा सकता है, और इसी लक्ष्य के साथ हमने इस प्लेटफॉर्म का निर्माण किया है।</p>
+                        <p>हालाँकि, स्वतंत्रता के साथ जिम्मेदारी आती है। हम मानते हैं कि सोशल मीडिया केवल लोगों को जोड़ने का माध्यम नहीं है, बल्कि यह एक शक्तिशाली माध्यम है जो समाज को आगे बढ़ाने में मदद करता है। My RootNet एक ऐसे वातावरण को सुनिश्चित करता है, जहाँ हर उपयोगकर्ता को अभिव्यक्ति की स्वतंत्रता होगी, लेकिन वह दूसरों के अधिकारों या भावनाओं का उल्लंघन नहीं करेगा। हम हमेशा ईमानदारी, पारदर्शिता और उपयोगकर्ता की गोपनीयता को सर्वोच्च प्राथमिकता देते हैं। हमारी तकनीकी टीम लगातार प्लेटफॉर्म को और अधिक उन्नत, सुरक्षित और उपयोगकर्ता-अनुकूल बनाने के लिए काम कर रही है, ताकि आपका डिजिटल जीवन और भी सुंदर और सुरक्षित हो सके।</p>
+                    </section>
+
+                    <section id="app-policy">
+                        <h2>ऐप नीतियां</h2>
+                        <p>My RootNet ऐप का उपयोग करने से पहले नीचे दी गई नीतियों का पालन करना सभी उपयोगकर्ताओं के लिए अनिवार्य है। ये नीतियां हमारे प्लेटफॉर्म को सुरक्षित रखने में मदद करती हैं।</p>
+                        <h3>खाता निर्माण और सुरक्षा</h3>
+                        <ul>
+                            <li><strong>आयु सीमा:</strong> ऐप का उपयोग करने के लिए उपयोगकर्ता की आयु कम से कम 13 वर्ष होनी चाहिए। नाबालिगों को अभिभावक की अनुमति की आवश्यकता है।</li>
+                            <li><strong>सटीक जानकारी:</strong> खाता खोलते समय सही नाम, जन्म तिथि, ईमेल और फोन नंबर का उपयोग करना होगा। नकली जानकारी के साथ खाता खोलना प्रतिबंधित है।</li>
+                            <li><strong>एकाधिक खाते:</strong> एक उपयोगकर्ता केवल एक मुख्य खाता रख सकता है। स्पैम या धोखाधड़ी के उद्देश्य से कई खाते बनाना पूरी तरह से प्रतिबंधित है।</li>
+                            <li><strong>लॉगिन सुरक्षा:</strong> अपना पासवर्ड किसी के साथ साझा न करें। आपके खाते की सभी गतिविधियों की जिम्मेदारी आपकी अपनी होगी।</li>
+                        </ul>
+                        <div class="warning-box">
+                            <strong>बॉट और नकली एंगेजमेंट प्रतिबंधित:</strong> व्यू या सब्सक्राइबर बढ़ाने के लिए किसी भी बॉट, थर्ड-पार्टी ऐप या स्वचालित सिस्टम का उपयोग करना सख्ती से प्रतिबंधित है। नकली सर्च या कृत्रिम तरीकों से एंगेजमेंट बढ़ाने की कोशिश करने पर खाता तुरंत और स्थायी रूप से हटा दिया जाएगा और कोई पूर्व चेतावनी नहीं दी जाएगी।
+                        </div>
+                    </section>
+
+                    <section id="content-policy">
+                        <h2>सामग्री नीतियां</h2>
+                        <p>यद्यपि My RootNet एक खुला प्लेटफॉर्म है, लेकिन हम कुछ विशिष्ट प्रकार की सामग्री को सख्ती से प्रतिबंधित करते हैं। नीचे दिए गए नियम तोड़ने पर सामग्री हटा दी जाएगी और खाता निलंबित कर दिया जाएगा।</p>
+                        <h3>निषिद्ध सामग्री की सूची:</h3>
+                        <ol>
+                            <li><strong>घृणास्पद भाषण:</strong> धर्म, जाति, लिंग, रंग या नस्ल के आधार पर किसी का अपमान करना या हमला करना निषिद्ध है।</li>
+                            <li><strong>वयस्क सामग्री:</strong> अश्लील तस्वीरें, वीडियो, ऑडियो या टेक्स्ट पोस्ट करना पूरी तरह से प्रतिबंधित है।</li>
+                            <li><strong>हिंसा और नुकसान:</strong> लोगों या जानवरों के प्रति हिंसक सामग्री, यातना के वीडियो, या आतंकवाद की प्रशंसा करना निषिद्ध है।</li>
+                            <li><strong>उत्पीड़न और बदमाशी:</strong> किसी को साइबर बुलिंग करना, व्यक्तिगत हमला करना या बिना अनुमति के निजी जानकारी पोस्ट करना दंडनीय अपराध है।</li>
+                            <li><strong>फर्जी खबरें:</strong> समाज में दंगे या भय फैलाने वाली किसी भी झूठी जानकारी को प्रकाशित करना निषिद्ध है।</li>
+                            <li><strong>कॉपीराइट उल्लंघन:</strong> मालिक की अनुमति के बिना किसी और के वीडियो, फोटो, संगीत या लेखन को अपने नाम से पोस्ट करना निषिद्ध है।</li>
+                        </ol>
+                        <div class="highlight-box">
+                            <strong>रिपोर्टिंग:</strong> यदि आपको लगता है कि कोई सामग्री हमारी नीतियों का उल्लंघन कर रही है, तो इसे रिपोर्ट करें। हमारी टीम 24 घंटे के भीतर हर रिपोर्ट की समीक्षा करती है और आवश्यक कार्रवाई करती है।
+                        </div>
+                    </section>
+
+                    <section id="creator-policy">
+                        <h2>क्रिएटर दिशानिर्देश</h2>
+                        <p>सामग्री क्रिएटर My RootNet की आत्मा हैं। क्रिएटर्स के लिए कुछ विशेष नियम हैं, जिनका पालन करने से उनका खाता तेजी से बढ़ेगा और प्लेटफॉर्म पर एक अच्छा समुदाय बनेगा।</p>
+                        <h3>नियम:</h3>
+                        <ul>
+                            <li><strong>मौलिक सामग्री:</strong> अपनी खुद की बनाई गई सामग्री अपलोड करें। किसी और की सामग्री का उपयोग करने पर उचित क्रेडिट देना होगा।</li>
+                            <li><strong>क्लिकबेट निषिद्ध:</strong> थंबनेल या शीर्षक में फर्जी जानकारी देकर व्यू हासिल करने की कोशिश न करें। शीर्षक और थंबनेल मुख्य सामग्री से मेल खाने चाहिए।</li>
+                            <li><strong>बातचीत:</strong> फॉलोअर्स के कमेंट का रिप्लाई दें। हमेशा विनम्र भाषा में बात करें और अच्छे संबंध बनाए रखें।</li>
+                            <li><strong>स्पैमिंग नहीं:</strong> एक ही सामग्री को बार-बार पोस्ट न करें या दूसरों की पोस्ट पर अप्रासंगिक लिंक शेयर न करें।</li>
+                        </ul>
+                    </section>
+
+                    <section id="community">
+                        <h2>समुदाय दिशानिर्देश</h2>
+                        <p>हमारा समुदाय सभी के लिए खुला और सुरक्षित है। यहाँ हर किसी को अपनी राय व्यक्त करने का अधिकार है। हालाँकि, समुदाय में फूट या अशांति पैदा करने वाले काम प्रतिबंधित हैं। धार्मिक या राजनीतिक मुद्दों पर गाली-गलौच या उकसाऊ पोस्ट करना निषिद्ध है। अगर किसी से मतभेद हो तो इसे विनम्रता से चर्चा करें, किसी का अपमान न करें।</p>
+                        <p>हम चाहते हैं कि हमारे प्लेटफॉर्म पर एक ऐसा माहौल बने, जहाँ नए क्रिएटर्स अपनी रचनात्मकता को निडर होकर व्यक्त कर सकें। अगर किसी की राय आपसे नहीं मेलती, तो उसे चुप कराने की कोशिश के बजाय तर्क से अपनी बात रखें। याद रखें, सम्मान बनाए रखने से ही एक स्वस्थ समाज का निर्माण होता है। किसी के कपड़ों, चेहरे या जीवनशैली को लेकर मज़ा उड़ाना या ट्रोल करना हमारे समुदाय में सख्ती से प्रतिबंधित है। एक-दूसरे के प्रति सहानुभूति रखने से एक सुंदर और खुशहाल डिजिटल वातावरण बनाना संभव है।</p>
+                    </section>
+
+                    <section id="monetize">
+                        <span class="coming-soon-badge">जल्द आ रहा है</span>
+                        <h2>मुद्रीकरण</h2>
+                        <p>My RootNet पर क्रिएटर्स अपनी सामग्री से कमाई कर सकेंगे। हालाँकि, अभी यह सुविधा हमारे प्लेटफॉर्म पर सक्रिय नहीं है।</p>
+                        <div class="highlight-box">
+                            <strong>जल्द ही लॉन्च हो रहा है:</strong> मुद्रीकरण नीति और कमाई के लाभ जल्द ही सभी क्रिएटर्स के लिए खोले जाएंगे। जब हमारे ऐप पर 10,000 (दस हज़ार) सक्रिय उपयोगकर्ता पहुँच जाएंगे, तब हम आधिकारिक तौर पर मुद्रीकरण शुरू करेंगे। तब तक आपके सहयोग और धैर्य की हम सराहना करते हैं। हम जल्द ही विस्तृत नियम प्रकाशित करेंगे।
+                        </div>
+                    </section>
+
+                    <section id="privacy">
+                        <h2>गोपनीयता नीति</h2>
+                        <p>यह गोपनीयता नीति समझाती है कि My RootNet आपकी व्यक्तिगत जानकारी को कैसे एकत्र, उपयोग और सुरक्षित करता है। हमारी सेवाओं का उपयोग करके, आप इस नीति की शर्तों से सहमत होते हैं।</p>
+                        <h3>1. हम क्या जानकारी एकत्र करते हैं</h3>
+                        <p>हमारी सेवाएं प्रदान करने के लिए हम निम्नलिखित जानकारी एकत्र करते हैं:</p>
+                        <ul>
+                            <li><strong>खाता जानकारी:</strong> नाम, ईमेल पता, फोन नंबर, जन्म तिथि और पासवर्ड (एन्क्रिप्टेड रूप में)।</li>
+                            <li><strong>प्रोफ़ाइल जानकारी:</strong> आपकी प्रोफ़ाइल तस्वीर, बायो और आपके द्वारा दी गई अन्य जानकारी।</li>
+                            <li><strong>उपयोग का डेटा:</strong> आईपी पता, ब्राउज़र का प्रकार, उपयोग का समय और ऐप के भीतर आपकी गतिविधियां।</li>
+                        </ul>
+                        <h3>2. जानकारी का उपयोग कैसे करते हैं</h3>
+                        <p>हम आपकी जानकारी का उपयोग खाता निर्माण, सुरक्षा सुनिश्चित करना, धोखाधड़ी रोकना और ग्राहक सेवा प्रदान करने के लिए करते हैं।</p>
+                        <h3>3. तीसरे पक्ष के साथ साझा करना</h3>
+                        <p>हम आपकी व्यक्तिगत जानकारी किसी तीसरे पक्ष को नहीं बेचते। हालाँकि, कानूनी आवश्यकता या सरकारी एजेंसियों के अनुरोध पर जानकारी साझा की जा सकती है।</p>
+                        <h3>4. डेटा सुरक्षा</h3>
+                        <p>आपकी जानकारी की सुरक्षा हमारे लिए अत्यंत महत्वपूर्ण है। हम एसएसएल एन्क्रिप्शन और आधुनिक सुरक्षा तकनीक का उपयोग करते हैं ताकि आपका डेटा सुरक्षित रहे।</p>
+                        <h3>5. उपयोगकर्ता अधिकार</h3>
+                        <p>आपकी अपनी जानकारी पर पूरा नियंत्रण है। खाता हटाने पर आपका सारा डेटा हमारे सर्वर से स्थायी रूप से मिटा दिया जाएगा।</p>
+                    </section>
+
+                    <section id="terms">
+                        <h2>सेवा की शर्तें</h2>
+                        <p>ये शर्तें आपके और My RootNet के बीच एक कानूनी अनुबंध हैं। ऐप का उपयोग करके, आप निम्नलिखित शर्तों से सहमत होते हैं:</p>
+                        <h3>1. स्वीकार्यता</h3>
+                        <p>My RootNet का उपयोग करने के लिए आपकी आयु कम से कम 13 वर्ष होनी चाहिए और आपके निवास स्थान के कानून के अनुसार अनुबंध करने की क्षमता होनी चाहिए।</p>
+                        <h3>2. उपयोगकर्ता की जिम्मेदारियां</h3>
+                        <p>आप अपने खाते की सभी गतिविधियों के लिए पूरी तरह से जिम्मेदार हैं। आपका पासवर्ड सुरक्षित रखना आपकी जिम्मेदारी है। किसी और का खाता उपयोग करना या दूसरों को अपना खाता उपयोग करने देना प्रतिबंधित है।</p>
+                        <h3>3. निषिद्ध गतिविधियां</h3>
+                        <p>ऐप सर्वर को हैक करना, वायरस फैलाना, बॉट का उपयोग कर डेटा स्क्रैप करना और अन्य उपयोगकर्ताओं को परेशान करना पूरी तरह से प्रतिबंधित है।</p>
+                        <h3>4. बौद्धिक संपदा</h3>
+                        <p>आप प्लेटफॉर्म पर जो पोस्ट करते हैं, उसका स्वामित्व आपका रहेगा। हालाँकि, पोस्ट करने के द्वारा आप My RootNet को उस सामग्री को प्रदर्शित करने का एक सीमित लाइसेंस प्रदान कर रहे हैं।</p>
+                        <h3>5. खाता समाप्ति</h3>
+                        <p>हमारी नीतियों का उल्लंघन करने पर हम बिना किसी पूर्व सूचना के आपका खाता बंद कर सकते हैं। गंभीर अपराधों के मामले में कानूनी कार्रवाई की जा सकती है।</p>
+                        <h3>6. बदलाव का अधिकार</h3>
+                        <p>हम किसी भी समय इन शर्तों या नीतियों को बदलने या अपडेट करने का अधिकार सुरक्षित रखते हैं।</p>
+                    </section>
+                    
+                    <!-- Complaint Form -->
+                    <div class="complaint-section" id="complaint-section">
+                        <h3 id="form_title">शिकायत या अधिक जानकारी के लिए</h3>
+                        <form id="complaintForm">
+                            <div class="form-group">
+                                <input type="text" id="form_link" class="form-input" placeholder="अपनी प्रोफ़ाइल लिंक यहां दर्ज करें" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="form_desc" class="form-textarea" placeholder="अपनी शिकायत या समस्या का विवरण यहां लिखें..." required></textarea>
+                            </div>
+                            <button type="submit" class="form-btn" id="form_btn">जमा करें</button>
+                        </form>
+                    </div>
+                `
+            }
+        };
+
+        // --- DOM Elements ---
+        const langSwitch = document.getElementById('langSwitch');
+        const contentArea = document.getElementById('contentArea');
+        const heroTitle = document.getElementById('hero_title');
+        const heroDesc = document.getElementById('hero_desc');
+        const footerCopy = document.getElementById('footer_copy');
+        const footerUpdate = document.getElementById('footer_update');
+        const menuBtn = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        const overlay = document.getElementById('overlay');
+        const body = document.body;
+
+        // --- Function to change language ---
+        function changeLanguage(lang) {
+            body.className = `lang-${lang}`;
+            
+            heroTitle.innerText = translations[lang].hero_title;
+            heroDesc.innerText = translations[lang].hero_desc;
+            footerCopy.innerHTML = translations[lang].footer_copy;
+            footerUpdate.innerText = translations[lang].footer_update;
+
+            document.getElementById('nav_about').innerText = translations[lang].nav.about;
+            document.getElementById('nav_app').innerText = translations[lang].nav.app;
+            document.getElementById('nav_content').innerText = translations[lang].nav.content;
+            document.getElementById('nav_creator').innerText = translations[lang].nav.creator;
+            document.getElementById('nav_community').innerText = translations[lang].nav.community;
+            document.getElementById('nav_monetize').innerText = translations[lang].nav.monetize;
+            document.getElementById('nav_privacy').innerText = translations[lang].nav.privacy;
+            document.getElementById('nav_terms').innerText = translations[lang].nav.terms;
+            document.getElementById('nav_complaint').innerText = translations[lang].nav.complaint;
+
+            contentArea.innerHTML = translations[lang].content;
+
+            // Update form placeholders
+            document.getElementById('form_title').innerText = translations[lang].form_title;
+            document.getElementById('form_link').placeholder = translations[lang].form_link_placeholder;
+            document.getElementById('form_desc').placeholder = translations[lang].form_desc_placeholder;
+            document.getElementById('form_btn').innerText = translations[lang].form_btn;
+        }
+
+        // --- Event Listeners ---
+        langSwitch.addEventListener('change', (e) => {
+            changeLanguage(e.target.value);
+        });
+
+        // Menu Toggle Logic
+        function toggleMenu() {
+            mainNav.classList.toggle('active');
+            menuBtn.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu); // Close menu when clicking outside
+
+        mainNav.addEventListener('click', (e) => {
+            if(e.target.tagName === 'A') {
+                toggleMenu(); // Close menu when a link is clicked
+            }
+        });
+
+        // --- Mailto Form Submission Logic ---
+        document.addEventListener('submit', function(e) {
+            if (e.target.id === 'complaintForm') {
+                e.preventDefault();
+                const profileLink = document.getElementById('form_link').value;
+                const description = document.getElementById('form_desc').value;
+                const toEmail = "myrootnet1@gmail.com";
+                const subject = "New Complaint/Report from My RootNet App";
+                const emailBody = `Profile Link: ${profileLink}%0A%0ADescription/Complaint:%0A${description}`;
+                const mailtoLink = `mailto:${toEmail}?subject=${encodeURIComponent(subject)}&body=${emailBody}`;
+                window.location.href = mailtoLink;
+            }
+        });
+
+        // --- Security Restrictions ---
+        document.addEventListener('contextmenu', function(e) {
+            const isInsideForm = e.target.closest('#complaintForm');
+            if (!isInsideForm) {
+                e.preventDefault();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'C' || e.key === 'J')) || (e.ctrlKey && e.key === 'U')) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        document.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+        });
+
+        // Initialize with Bengali
+        changeLanguage('bn');
+    </script>
+</body>
+</html>
